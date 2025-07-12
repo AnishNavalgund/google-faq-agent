@@ -22,8 +22,8 @@ RUN poetry config virtualenvs.create false && poetry install --no-interaction --
 COPY . .
 
 # Copy .env and credentials
-COPY .env .env
-COPY creds.json creds.json
+#COPY .env .env
+#COPY creds.json creds.json
 
 # Expose Flask port
 EXPOSE 8080
