@@ -34,7 +34,12 @@ for entry in faq_data:
         best_score = score
         best_match = entry
 
-print("\nBest Match:")
-print("Q:", best_match["question"])
-print("A:", best_match["answer"])
-print(f"Similarity Score: {best_score:.4f}")
+THRESHOLD = 0.75
+
+if best_score < THRESHOLD:
+    print("\n Sorry, I couldn't find a relevant answer for that question.")
+else:
+    print("\nBest Match:")
+    print("Q:", best_match["question"])
+    print("A:", best_match["answer"])
+    print(f"Similarity Score: {best_score:.4f}")
